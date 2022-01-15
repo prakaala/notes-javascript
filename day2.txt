@@ -1,0 +1,20 @@
+this is about object data type which is a composite data type in js.
+
+object would have a key and a value pair. A key is identifier and value is one of the primitive data types.
+
+var obj = { 
+	name :"Hari";
+	age: 43;
+	address: {
+		city: "Monroe";
+		state: "LA";
+		zip: 71270;}	
+	}
+
+To access the elements of object, we use obj."key"; 
+	
+Array in js
+ it is the indexed data where there are indexes and we put values in it. The values can be any integer, string , boolean, or array itself. 
+
+var x = "adf";
+var x = 3;
