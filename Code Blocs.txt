@@ -1,0 +1,17 @@
+//Code Block
+It is something within two curly braces.  It can be nested as well.
+{
+	var a = 1;
+		{							var x = 2;
+		}
+	var b = 2;
+}
+
+best practices, is to put a semicolon at the end.
+Indentation is a must.
+use of code blocks when needed.
+
+
+use of ternary operator:
+	var a = 4;
+	if(a>2)?-"greater than 2": "not greater";

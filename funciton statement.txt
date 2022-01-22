@@ -1,0 +1,57 @@
+1. Function Statement::
+
+funciton a(){
+	console.log('This is a statement');
+	}
+
+2. Funciton Expression::
+var x = function(){	
+	console.log('this is an expression');
+		}
+
+THE difference between both of them, comes when it is hoisted;	
+while both of the functions, are called before declaration, the value of x will be undefined. And we cannot invoke something which is undefined..
+
+var x;
+x();
+this will happen..
+
+As a  result, we will get error..
+
+Function statement and function expression which is not hoisted..
+
+
+3. Function Declaration is same as function statement
+
+
+4. Anonymous Function;; function without the name..
+
+So they are the functions which are declared without name. 
+Their main use is that they are passed to other functions as parameters..
+
+function (){		
+	console.log('This is an anonymous f(x)');
+	}
+
+function a(param1){	
+	console.log('param1 is ', param1);
+	}
+
+the fucntion a can be called with anonymous functions..
+	a( funciton() ){	
+		console.log('hey');
+		};
+
+
+5. Named function Expression
+	var x = function xyz(){	
+		console.log('b is called');
+		 console.log('xyz is ', xyz);
+			}
+
+
+They are function expressions but with names, we cannot invoke the function with that name in the global scope, but we can invoke that function inside that scope.
+
+6. Parameters and arguments:
+
+When function is called we pass arguments, and when the function is declared and run it gets parameters;;

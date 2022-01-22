@@ -1,0 +1,23 @@
+Functions continued....
+
+First Class Functions
+
+function a(param1){
+	console.log('a is called with param: '' param1);
+}
+
+
+
+We can call a by passing a string number anything..
+
+If we pass anonymous function as a parameter in a. 
+Since we are passing function as a value, and we can also return function(){} ,that is called first-class functions.. 
+
+*Note: In any programming language, if function can be passed as a value, then it is called a first class function, first class citizen as well\
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+Execution of JavaScript:
+
+
+Whenever a js code is written, there will be execution of it in browser engine. The execution is global execution:
+
+
+
+
+var x = 10;
+function timesTen(a){
+	return a*10;
+		}
+
+var y = timesTen(x);
+console.log(y);
+
+The global execution happens in two phases:
+
+Global Execution Context
+A. Creation Phase
+	when a script executes for the first time, the js engine creates a global execution context. During this phase, it performs the following tasks:
+
+i> it creates a global object i.e. window in the browser or global in node js..
+ii> it then creates a 'this' object that points to the global object above.
+iii> Then it setups a memory heap for storing variables and function references{the definition of }.
+iv> it stores the function declaration in memory heap and variables within the global execution context with initial values as undefined..(Hoisting happens here);
+
+
+In our example during the creation phase, the js engine stores the variables x and y and function declaration timesTen() in the Global Execution Context. Besides it initializes the variables to undefined.
+
+Then it moves to execution phase,,
+
+B. Execution phase;
+During the execution phase, the js engine executes codes line by line. In this phase it assigns value to variables and executes the function calls.
+
+*Interesting phase*
+For every function call, the js engine creates a new function execution context, but instead of creating a global object, it creates a the arguments object that contains a reference to all the parameters passed in the function:
+
+in our example the function execution context creates the arguments object that references all parameters passed into function, sets this value to the global object, and initializes the parameter to undefined..  
+
+
+During the execution phase of the function execution context, it assigns 10 to the parameter and returns the result (100) to the Global Execution Context..
+
+
+To keep track of all the execution contexts, the global execution context and the function execution context,the js engine uses a data structure called as "call stack";
+
+

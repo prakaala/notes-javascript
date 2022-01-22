@@ -1,0 +1,47 @@
+We have to convert a binary into decimal number,
+Also convert hexadecimal to decimal number,
+and convert octal to decimal number..
+
+
+The keyword required to convert numbers from different bases to decimal number is ParseInt()..
+
+For binary to decimal:
+var a = 1000;
+parseInt(a, 2);
+var b = 10;
+parseInt(b, 2);
+So from hexadecimal to decimal, we just replace the base with the base of hexadecimal.
+
+
+The keyword to convert from decimal to any other bases we use toString() function...
+
+var x = 9;
+x.toString(2)
+x.toString(8)
+x.toString(16)  //this is for hexadecimal
+
+
+
+There is an example of converting a decimal to binary and and shift it by number of digits, and converting into decimal again..
+We can use the two methods combined as converting into binary and removing the last two digits and again converting into decimal using parseInt(), we get the number..
+
+WE can do the same functunality using an operator..that i.. >> which is the rightshift operator
+
+eg.. 9>>2 = 2;
+36>>2 = 9
+4555>>2 = 1138;
+
+LeftShift Operator:
+We will add two zeroes at the end of binary number converted, and again convert them to decimal:
+9<<2 = 1001 ie 100100 that converted to decimal ie 36
+
+
+
+
+Binary AND, Binary OR, Binary XOR operators::
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+Arrays in JS
+
+
+Arrays are a special type of data structure. Array is a object in JS.
+Array have indices which are the key to the value, that we put into it.
+To access the array, we use the numbers..
+Lets take an example,
+  var a = [1,2,3,4];
+
+the empty stuffs in array , or the default are empty, which is undefined in the array..
+
+there is empty stuff if we delete any element of array, just by using delete arr[3]. The index 3 will have undefined value within.
+
+
+We can have array, objects, functions  within the array.
+
+
+We can separate the each character of string by the array concept..
+
+var s = "one";
+s[0];
+s[1];
+s[2];
+
+
+
+
+
