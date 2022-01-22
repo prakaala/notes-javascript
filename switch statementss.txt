@@ -1,0 +1,17 @@
+Syntax: 
+
+var a = 1;
+switch (a){
+	case 1:
+	//execute this line					break;
+	case 2:
+	// execute this line					case 3:	
+	//execute this line
+	break;
+
+	default:
+	//execute this file					break;
+
+}
+
+The switch statement has switch case and e
