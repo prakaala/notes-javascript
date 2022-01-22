@@ -15,3 +15,31 @@ use of code blocks when needed.
 use of ternary operator:
 	var a = 4;
 	if(a>2)?-"greater than 2": "not greater";
+
+Things to be put into the conditional block;
+logical operators like ! && ||;
+comparisons like ===, == , !==, !==;
+values that can be converted into booleans
+
+Conditionals:
+
+There are control flows which determine the flow of program from one block to another..
+
+var a = 2;
+var b = 3;
+
+There are nested conditionals inside the main conditional as well. 
+
+checking if the variable exists or not
+We can use typeof operator to check whether a variable exists or not.. before declaring the variable
+typeof operator gives undefined which is a string and the code block can be executed or not on the basis of that.
+
+Ternary Operator:
+
+var x = (condition) ? execute this part if true: else execute this part
+
+var a = 1;
+var result = (a ===1) ? 'a is one': 'a is not one';
+
+
+For multiple conditions it is better to use regular if expression
