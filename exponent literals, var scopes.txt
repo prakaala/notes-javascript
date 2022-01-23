@@ -1,0 +1,58 @@
+//Exponent Literals
+using the e word to find the exponent of the number
+
+use 1e1
+use 2e-3
+What is the value of 234.34e-2?
+Find the answer
+
+//Infinity is a number that is hard for js to handle
+
+Infinity = infinity
+typeof infinity is number
+-
+
+The typeof inifinity is a number
+the positive number that js can handle is 1e+308;
+the number 1e+309 is infinity
+The smallest number that js consider is 5e-324;
+
+var a =4/0;
+a; is infinity
+type of a is a number
+
+
+Infinity - infinity = NaN
+Infinity+/-/*// number = infinity
+
+
+Not a Number;
+
+typeof NaN is a number feri 
+
+addition , substraction, multiplication, division is not a number
+
+
+the difference between 
+
+Null and undefined
+
+Undefined is something whose value is not defined in the beginning;
+ var x; here the value of x  is not defined
+'
+null is a special value whose type is null; 
+
+
+Scope of variables continuedd...
+
+if function is not called, the values declared inside the variable is not defined
+if function is called and variable is declared without a var sign then it is a global variable and it can be accessed by using this keyword.
+
+
+Deleting the variable
+
+we can use the delete varname to delete the variable;
+global variables declared without var can be deleted, 
+
+we can even delete object elements using delete statements..
+
