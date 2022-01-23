@@ -1,0 +1,61 @@
+//while loop
+it works till certain condition is false;
+
+// for loop 
+its like java's loop
+
+for(var i = 0; i<10; i++)
+{	
+	console.log("this is the time a code is run", i);
+}
+
+So the thing printed out is 0 1 2 3 4 5 6 7 8 9 
+Here the condition is checked whether it is true or false;
+
+
+for (var i = 0; i<5; i++)
+{	
+	console.log('i is ', i);
+}
+
+var i = 0;
+while (i<5)
+{	
+	console.log('i is ', i);
+	i++;
+}
+
+for(var j = 10; j>0; j--)
+{	
+	console.log("j is ",j);
+}
+
+
+We can use for loops to find the elements of array;
+// Syntax of for in loop in array and objects:
+
+for(  var i in array)	
+{
+	console.log('i is ',i , ' and value is ' , arr[i];
+}
+
+
+using loop to access objects:
+
+var obj = {
+	name:"jack";
+	lastname:"bauer";
+	age: 12;
+	gender: "male";
+	}
+
+
+for(var i in obj){
+	console.log('i is ' , i, 'val is ', obj[i]
+}
+This example is used for object use
+
+var str = "Mango is a good fruit";
+
+	
+	
