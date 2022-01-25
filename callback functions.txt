@@ -1,0 +1,68 @@
+//Callback Functions
+
+
+function sum(param){
+
+    console.log("arguments are: ", arguments);
+    var total = 0;
+    param();
+return total;
+}
+
+
+function b(){
+    console.log("this is the callbacked funciton");
+
+}
+
+sum(b) 
+
+This is the code for call back functions.A callback function is calling of another function within a fucntion so that it can be executed later on. 
+
+Also, while declaring the parameters name in the callback funcitons , use different names than the original, so that any possible errors may not occur.
+
+
+another example:
+
+
+function invoke_twofs( a , b){
+	return a() + b();
+}
+
+function one()
+{
+	return 1;
+}
+
+function two()
+{
+	return 2;
+}
+
+invoke_twofs( one, two);
+
+While invoking this funcitons we can pass the anonymous functions as a parameter to the functions...
+Without writing the funciton name twice, it can be called..
+a cleaner way to write code
+
+
+Lets look at another example
+function  multipyandadd(a, b,c, callback){
+	var arr = [];
+	for (var i = 0; i< 3; i++)
+	{
+		arr[i] = callback(arr[i]*2);
+	}
+	return arr;
+}
+
+function add(x) {
+	var a = x +1;
+	return a;
+}
+
+multipyandadd(1,2,3, add);
+
+
+
+
