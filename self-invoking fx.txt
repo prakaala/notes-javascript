@@ -1,0 +1,35 @@
+Self invoking funcitons are anonymous funcitons which doesnt have any name and they need to be called immediately after the declaration, otherwise they cannt be called. Here they call themslves and run, as a result we say them self-invoking funcitons
+
+
+function(){
+console.log("hello world");
+}
+//This will give error as it canot be called 
+//however it can be fixed
+
+
+(function(){
+console.log("hello world");
+})
+
+Now this will not give error;
+still it is not called, or cannot be called
+so we call it immediately after the declaraiton
+
+
+(function(){
+console.log("hello world");
+}())
+
+The execution call can be called outside the fx as well
+
+(function(){
+console.log("hello world");
+})  ();
+
+Any local variables that are declared inside this anonymous fucntions can be exported to global varibales by passing the window object while exeution
+
+This is done at the time of setup 
+
+
+
