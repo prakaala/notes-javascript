@@ -1,0 +1,52 @@
+//private funcitons
+
+
+They are another funcitons which are created inside other funcitons ..
+These fucntions cant  be accessed outside the function
+
+
+//fucntion returning other another functions, because function are first class funcitons
+
+
+//functions returning other functions
+function a(){
+	alert('Alpha');
+	return function(){
+		console.log("b");
+}
+}
+
+var x = a();
+
+or the other can
+
+
+var x = a()();
+
+
+var x = a()()();
+
+
+//function, that rewrite themself
+
+the fiunction that defines the other funciton again and chanes the fucnton by redifining the function 
+//rewrite thyself;
+
+
+function x() {
+	
+	function print(){	
+		console.log("Printing somethinhg");
+		}
+
+	function reassign()
+		{
+		console.log("This is the new x fucntion");
+		}
+	print();
+	return reassign;
+}
+
+
+x();
+x()();
