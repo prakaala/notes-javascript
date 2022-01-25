@@ -1,0 +1,43 @@
+
+
+Use of this keyword to view the global variables in javascript;
+
+We can not delete any literal created with var keyword:
+
+
+var obj =  {
+	name: "Raja",
+	age: 12;
+	lastname: "Ritu"
+};
+
+we cannot delete the obj keyword.. 'however we can delete the obj.name, we can delete obj.age, and obj.lastname.
+
+So variable should be created with var::
+
+Functions:
+
+functions are groups of code, can be called 
+
+We must attach a return statement with a function..
+if no return statement is attached, then it will return undefined;
+
+
+Best Practices:
+
+Reduce the number of global variables
+Variables must be created with var keyword
+
+Functions are data>>.
+
+they contain code.
+They are executable./ running/ 
+they can be passed into onther functions
+
+To pass a function as a parameter:
+
+f3(f);  == this would pass the function code.
+f3(f()); == this would give the value.
+
+
+
