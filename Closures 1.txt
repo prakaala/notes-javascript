@@ -1,0 +1,124 @@
+//Closures 
+
+Before beginning closures , understanding scope chain is important:
+
+
+Anything that is declared inside a function cant be accesed outside, but anything declared outside a function can be accessd can be inside the function.
+
+var x = 1;
+
+function f(){
+	var y =2;
+	function n(){
+	var z = 3;
+}
+}
+here the scope of z is inside of n() only, y is in f() and n(), while of x is everywhere.
+
+
+
+// Lexical scope:
+function f1(){	
+	var a = 1;
+	f2();
+}
+
+function f2(){
+	console.log('a is ', a);
+}
+f1();
+
+
+/function declaration and invoking are different:
+Lexical scope is the scope of fucntions and variables where they are created. 
+// Any variable in global space can be accesed inside any function.
+//If a variable is in function scope and, we want to access the variable in other function in global scope, that results in error.
+
+
+
+//closures
+
+If a function is returned to global space, after creating in a function scope, due to lexical scoping the moved function can access the variables of the function scope. This is closure.
+
+
+
+var a = 1;
+function f(){	
+	var b = 2;
+	return function(){
+		var c = 3;	
+		console.log('b is' ,b);
+		}
+
+var n = f();
+console.dir(n);
+n();
+
+
+/This is the example of closure where the function can access the other variable declared in the function scope.
+
+//Things to be done in the closure:
+One function, and one variable (at least in the)
+Then returning the function, this function will be returned to the global space;
+It will be assigned to a variable in global space,
+
+When the function is invoked, the variable can be accessed.
+
+
+// 2nd example
+
+
+function f(param){
+	function n(){
+		return param;
+		}
+	param++;
+	return n;
+}
+var m = f(343);
+
+
+USe of console.dir(m);
+It shows the closure property of the functions:
+
+
+Example 3:
+
+function x(horsepower){
+	return function(model){
+		console.log("model is ", model, " and hp is " , horsepower);
+}
+}
+
+var z = x(34);
+z('ford');
+
+
+
+Example 4:
+
+function calculator(number1){
+	return function(number2){
+		return number1+ number2;
+
+		}
+}
+
+var n = calculator(3);
+n(4);
+
+
+Example 5
+
+function urlGenerator(domain){
+	return function printURL(name){
+		console.log("https:// " + name+ domain);
+	}
+
+var n = urlGenerator('.com');
+
+n('google');
+
+
+
+
