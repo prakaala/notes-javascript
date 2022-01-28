@@ -1,0 +1,38 @@
+//Here the function returns innerSum function only till b is passed, if nothing is passed the total value is returned..
+
+
+function sum(a){
+
+//Create a variable that acts as a closure, and that returns the total value
+	var total = a;  //initializing the value 
+ // the function is named because anonymous fucntions cant be returned and we have to return this function till tule
+	return function innerSum(b){
+		if(b){
+			total +=b;
+			return innerSum;
+		}
+		else{
+			return total;
+		}
+	}
+}
+
+
+//For subtraction of the functions
+
+function subtract(a){
+    var total = a;
+     return function againSub(b){
+        if(b || b === 0){
+            total -= b;
+            return againSub;
+        }
+        else
+        {
+            return total;
+        }
+    }
+}
+
+			
+	

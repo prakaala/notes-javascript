@@ -1,0 +1,48 @@
+Examples continued:
+
+Even if we arent returning the function we are creating a closure condition, here
+
+ var n;
+
+function x(){
+	var b = 1;
+	n = function(){
+	console.log('b is ', b);
+	}
+x();  //x needs to be invoked here to update n
+n(); // n called to show the closures
+
+
+
+??Important Example:
+
+function f(){
+
+	var arr =[];
+	for(var i = 0; i < 3; i++){
+		arr[i] = function(){
+			console.log('i is ', i);
+		}
+		console.log(i);
+		return arr;
+}
+
+
+var element = f();
+
+
+
+function x(a){
+    console.log('a is ', a);
+        return function y(b){
+                    console.log(' b is ', b);
+                    return function z(c){
+                            console.log('c is ' , c);
+                    }
+        }
+    
+}
+
+WE can execute the function x multiple times because it has return fucntions::
+
+

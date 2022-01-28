@@ -48,7 +48,7 @@ a cleaner way to write code
 
 Lets look at another example
 function  multipyandadd(a, b,c, callback){
-	var arr = [];
+	var arr = [a, b, c];
 	for (var i = 0; i< 3; i++)
 	{
 		arr[i] = callback(arr[i]*2);
