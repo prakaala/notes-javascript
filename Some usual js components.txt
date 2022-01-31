@@ -1,0 +1,32 @@
+parseInt(1e3);
+parseFloat(34.45e-3)
+isNaN(NaN)
+NaN=== NaN false
+Infinity === Infinity true
+isFinite(Infinity)  false
+isFinite(true) true
+isFinite(false)
+
+
+
+
+
+other components:
+
+encodeURI('http://www.google.com/page1. df= 3Rtg?');
+decodeURI();
+
+encodeURIComponent('http://www.google.com/page1. df= 3Rtg?');
+decodeURIComponent();
+
+
+
+alert('hi');
+prompt('kinda input like in js');
+
+
+
+
+
+
+confirm("click the delete button");
