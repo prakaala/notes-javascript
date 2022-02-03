@@ -1,0 +1,16 @@
+JSON is object in js but it has everything "" enclosed within.
+Json is used to get data from the server,
+Every data is in the form of json object.
+We need to put double quotes in keys in object in json
+
+
+Converting json to js and js to json 
+
+var obj = {
+	name: "jack",
+	last: "bauer"
+		}
+
+JSON.stringify(obj);to convert js object to json 
+
+JSON.parse(" ");  To convert json to js object
