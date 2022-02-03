@@ -1,0 +1,23 @@
+//3 ways to create objects
+
+using object literal:
+var obj  = {};
+
+using the new keyword:
+var obj1 = new Object();
+
+we can add obj1.name = "tony";
+	obj1.class = 3;
+	obj1.lastname = "reast"
+
+
+//the third way is by using function, as function behaves as a object as well:
+
+function obj3 = {
+	this.name : "Karan",
+	this.last: "Waldia"
+	}
+
+var o = new obj3();
+and typeof o; gives object;
+
