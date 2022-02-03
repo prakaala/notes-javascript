@@ -1,0 +1,66 @@
+var c = {
+    bookname: "the c object",
+    say: function(){
+        this.bookname = 'updated c object';
+        console.log("book name is ", this.bookname);
+        console.log(this);   //1
+        
+        
+        function abc(){
+                this.toc = "inside abc objext created";
+                function xyz(){
+                                console.log('inside xyz');
+                        console.log(this);  //2
+                }
+            console.log("inside abc");
+            console.log(this);  //3
+            xyz();
+        }
+        
+        var x = new abc();
+        
+    }
+}
+
+
+Run this code to see where the this keyword points towards. If a function is created as a value for a key in an  object, then the this would refer to the object where it is createdd;
+
+If a funciton is created inside another function in object then the this would point toward the global object.
+
+
+Here In 1 this is pointing to the object c
+In 2 this is pointing to abc;  // new keyword is used to create object here.
+In 3 this is pointing to global scope.
+
+
+
+var c = {
+    bookname: "the c object",
+    say: function(){
+        var self = this;
+        this.bookname = 'updated c object';
+        console.log("book name is ", this.bookname);
+        console.log(this);
+        
+        
+        function abc(){
+               
+                this.toc = "inside abc objext created";
+                function xyz(){
+                                 self.bookname = "c object accessed in xyz";
+                                console.log('inside xyz');
+                        console.log(self.bookname);
+                }
+            console.log("inside abc");
+            console.log(self.bookname);
+            xyz();
+        }
+        
+        abc();        
+    }
+}
+
+//Here the code is modified to store this// which is the c object// to pass the object's value in other functions:
+
+
+

@@ -21,3 +21,54 @@ function obj3 = {
 var o = new obj3();
 and typeof o; gives object;
 
+
+this keyword points to global object.
+
+
+If we create a function and console this..
+
+function a(){
+	console.log(this);
+}
+
+
+a();
+
+This object is pointing to the global object. It is not pointing to a() function..
+
+
+
+function a(){
+	this.name = "mango";
+	console.log(this);
+}
+
+a();
+
+We can access the variable name outside the a() by this; this.name, and name, because this when associated with any variable will refer to the global object. 
+We can use only name to access the mango. 
+
+
+//creating object 
+
+
+function a(){
+	this.name = "mango";
+	console.log(this);
+}
+
+var obj =  new a();
+
+
+//important thread
+
+var c = {	
+	bookName: "the c object",
+ 	,jjsay: function(){
+	ulm console.log('bookname is ', this.bookName);
+}
+}
+
+c.say()
+
+
