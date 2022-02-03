@@ -1,0 +1,18 @@
+function alpha(first, last ){
+	this. first = first;
+	this.last = last;
+	}
+
+//To add more functions to the functios:
+	alpha.prototype.methods = function(){					console.log("Hello World");
+			}
+
+var o1 = new alpha("Kurian", "Balane");
+
+o1.methods();
+
+	o1.methods would print hello world;
+
+
+Here it is an example of adding the method/functionality of the object, which we have created using funciton.
+
