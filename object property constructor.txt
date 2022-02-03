@@ -1,0 +1,53 @@
+like in java creating object-classes:
+
+In js object has the constructor property as we use function to create object using new keyword:
+
+
+function a1(x, y){
+	this.firstname = x;
+	this.lastname = y;
+}
+
+h1 = new a1("Hari", "Acharya");
+
+h1 has property of constructor in prototype;
+
+so 
+if we use h1.constructor: this is a fucntion ;
+
+but h1 is object
+
+
+so again tp create a new fucntion 
+
+h2 = new a1("Ruman" , "Ghimire");
+
+or h2 = h1.constructor("Tori", "Rap");
+
+
+But if we create object using the object literal ie {} then the object.constructor property would give the object() function.
+
+var o = {}
+o.constructor would be default object();
+
+
+
+
+var c1 = fucntion{
+		this.a = 1;
+		return {
+			b : 2;
+			}
+
+c2 = new c1();
+
+In this case, this.a would not work, only the return part  would be considered as object.
+
+SO When object, functions, and arrays are returned from a constructor the new object created would take the return value. 
+
+//pass by reference is done to objects, functions and arrays
+
+// primitive data types are passed by value.
+
+
+
