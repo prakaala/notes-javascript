@@ -1,0 +1,114 @@
+// The prototypw is used in inheritance.
+
+There is parent class and a child class, the child class can access all the methods of parent class, this is inheritance, and we use prototype to extend the functionality of the class.
+
+
+function Parent(){
+	this.myName = "Parent";
+	this.str1 = function(){
+			return 'My name is ' + this.myName
+		}
+
+
+
+function Child(){
+this.myName = "Child";
+this.str1 = function(){
+	return 'My new name is ' + this.myName
+}
+
+
+The prototype of Parent is Parent() and the prototype of Child is Child().
+
+
+We will override the childs prototype of child by changing the object 
+
+Child.prototype = new Parent();
+
+This will override its default constructor, and the child object will point to parent object, As constructor is lost while we are liniking the child with parent, we need to create constructor
+
+Child.prototype.constructor = Child;
+
+
+
+
+
+An example:
+
+
+
+function Shape(){
+this.name = "Shape";
+this.toString = function(){
+	return this.name;
+}
+
+
+function  Triangle(side, height){
+
+this.name = "Triangle";
+this.side = side;
+this.height = height;
+ this.getArea = function(){
+	return this.side*this.height/2;
+}
+
+
+Triangle.prototype = new Shape()
+
+Triangle.prototype.constructor = Triangle;
+
+
+Now we create an object of the child;
+
+var x = new Triangle(30, 45);
+
+
+
+
+
+//Making TwoDShape parent of Triangle, Shape parent of TwoDshape
+ 
+
+function Shape(){
+this.name = "Shape";
+this.toString = function(){
+	return this.name;
+}
+
+
+
+function TwoDShape(){
+this.name = "TwoDShape";
+this.myShape = function(){
+	return 'My shape is  ' + this.name
+}
+
+
+
+function  Triangle(side, height){
+
+this.name = "Triangle";
+this.side = side;
+this.height = height;
+ this.getArea = function(){
+	return this.side*this.height/2;
+}
+
+
+TwoDShape.prototype = new Shape();
+TwoDShape.prototype.constructor = TwoDShape;
+
+
+Triangle.prototype = new TwoDShape();
+Triangle.prototype.constructor = Triangle;
+
+
+
+
+var x = Triangle(30,40);
+x.getArea();
+x.myShape()
+x.toString();
+
+
