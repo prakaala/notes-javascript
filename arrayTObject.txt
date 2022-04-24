@@ -16,3 +16,20 @@ for(var i = 0, i< arr.length; i++){
 		}
 }
 
+
+If we had string instead of array, we can also perform the same function 
+
+var string = 'hello'
+
+var obj = {};
+
+for(var i = 0; i< string.length; i++){
+	var item = string[i]
+	if(obj[item]){
+		obje[item]++
+		}
+		else{
+		obj[item] = 1
+		}
+}
+
