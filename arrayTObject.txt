@@ -1,0 +1,18 @@
+//Converting the array into object 
+
+
+var arr = ['h', 'e', 'l', 'l', 'o'];
+
+
+var obj = { };
+
+for(var i = 0, i< arr.length; i++){
+	var item = arr[i]
+	if(obj[item]){
+		obj[item]++
+		}
+		else{
+		obj[item] = 1
+		}
+}
+
